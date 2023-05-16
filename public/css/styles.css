@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(155, 155, 155);
+    font-family: 'Saira', sans-serif;
+}
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 52px;
+}
+
+#btn {
+    position: fixed;
+}

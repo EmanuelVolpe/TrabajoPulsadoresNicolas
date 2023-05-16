@@ -2,4 +2,8 @@ const obtenerDatos = (connection, func) => {
     connection.query('SELECT * FROM datos', func);
 };
 
-module.exports = {obtenerDatos};
+const borrarDatos = (connection) => {
+    connection.query('CALL borrado()');
+};
+
+module.exports = {obtenerDatos, borrarDatos};

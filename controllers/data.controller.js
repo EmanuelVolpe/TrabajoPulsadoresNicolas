@@ -7,14 +7,16 @@ const getData = (req, res) => {
         if (error) {
             throw error;
         } else {
-            console.log(results);
             const registros = results;
             res.render(path.join(__dirname, '/../views/index.ejs'),
                 {
-                    titulo: 'TABLA DE REGISTROS DEL RUSO MONTANI',
+                    titulo: 'TABLA DE REGISTROS',
                     registros: registros
                 }
             );
+            if(results.length >= 1000){
+                datos.borrarDatos(connection);
+            }
         }
     });
 };
